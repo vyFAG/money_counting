@@ -2,15 +2,30 @@
 #define ADDMENU_H
 
 #include <QMainWindow>
+#include <QPushButton>
+#include <QLineEdit>
+#include <QLabel>
+#include <QRadioButton>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 class addMenu : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit addMenu(QWidget *parent = nullptr);
+    addMenu(QWidget *parent = nullptr);
     
-signals:
+private:
+    QPushButton* button;
+    QLineEdit* textSpace;
+    QLabel* text;
     
+    QRadioButton* incomeButton;
+    QRadioButton* outcomeButton;
+    
+    QVBoxLayout* mainLayout;
+    
+    QHBoxLayout* generalLayout;
 };
 
 #endif // ADDMENU_H

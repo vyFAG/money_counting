@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "addmenu.h"
 #include <QDebug>
 #include <QMessageBox>
 #include <QInputDialog>
@@ -17,10 +18,11 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::on_addButton_clicked()
-{
-    QString c_text = QInputDialog::getText(this, "Item", "Enter new item");
+{   
+    addMenu* menu_bar = new addMenu;
+    menu_bar->show();
     
-    ui->moneyCount->addItem("sex");
+    //ui->moneyCount->addItem("sex");
     qDebug() << ui->moneyCount->currentItem();
 }
 
