@@ -23,5 +23,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    double totalMoney;
 };
 #endif // MAINWINDOW_H

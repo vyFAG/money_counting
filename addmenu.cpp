@@ -26,8 +26,10 @@ void addMenu::checkText() {
     if (textSpace->text() != "") {
         if(incomeButton->isChecked()) {
             isIncome = 1;
-        } else {
+        } else if (outcomeButton->isChecked()) {
             isIncome = 0;
+        } else {
+            return;
         }
         
         emit SendInfo(textSpace->text().toDouble(), isIncome);
