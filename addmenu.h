@@ -23,9 +23,19 @@ private:
     QRadioButton* incomeButton;
     QRadioButton* outcomeButton;
     
+    QVBoxLayout* radioLayout;
     QVBoxLayout* mainLayout;
     
     QHBoxLayout* generalLayout;
+    
+    bool isIncome;
+    
+public slots:
+    void checkText();
+    
+signals:
+    void SendInfo(double summ, bool isIncome);
+    
 };
 
 #endif // ADDMENU_H

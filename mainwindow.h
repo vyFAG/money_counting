@@ -19,7 +19,8 @@ public:
 private slots:    
     void on_addButton_clicked();    
     void on_DeleteButton_clicked();
-    
+    void addCounter(double, bool);
+
 private:
     Ui::MainWindow *ui;
 };

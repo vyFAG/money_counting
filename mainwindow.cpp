@@ -22,8 +22,7 @@ void MainWindow::on_addButton_clicked()
     addMenu* menu_bar = new addMenu;
     menu_bar->show();
     
-    //ui->moneyCount->addItem("sex");
-    qDebug() << ui->moneyCount->currentItem();
+    connect(menu_bar, SIGNAL(sendInfo(double, bool)), this, SLOT(addCounter(double, bool)));
 }
 
 void MainWindow::on_DeleteButton_clicked()
@@ -32,4 +31,8 @@ void MainWindow::on_DeleteButton_clicked()
         
         delete ui->moneyCount->currentItem();
     }
+}
+
+void MainWindow::addCounter(double money, bool isIncome) {
+    
 }
